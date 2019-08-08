@@ -1,0 +1,12 @@
+@namespace("me.rotemfo.violations")
+protocol ViolationProtocol {
+  record Violation {
+    int                  id;
+    string               name;
+    int                  severity;
+    union {null, long}   serviceid = null;
+    union {null, string} unitid = null;
+    union {null, int}    violationtypeid = null;
+    union {null, string} violationscopeid = null;
+  }
+}
